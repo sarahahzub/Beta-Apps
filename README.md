@@ -5,7 +5,7 @@ install **next to** the normal apps, with their own app id, icon (orange **B** b
 testing them never changes or breaks the normal install. Remove a beta app any time from the TV's app list or
 Homebrew Channel.
 
-## Chromium Beta 0.0.44
+## Chromium Beta 0.0.46
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -20,6 +20,10 @@ This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
 
+**New in 0.0.46:** fixes the app closing right after the splash screen. At start Chrome sent the TV a video
+window message that some TVs reject by ending the app; the launcher now checks first, and Chrome sends it only
+where it's accepted. If videos then play with sound but a black picture, please say so in your report.
+
 ### Install
 
 **Homebrew Channel:** Settings → **Add repository**:
@@ -29,12 +33,12 @@ https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/apps.json
 then open **Chromium Beta** in the app list and install it.
 
 **Developer Mode:** download the IPK from [Releases](https://github.com/sarahahzub/Beta-Apps/releases), then
-`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.44_arm.ipk`.
+`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.46_arm.ipk`.
 
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.44" in the notes. Please include:
+and write "Beta 0.0.46" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
