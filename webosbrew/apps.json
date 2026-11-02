@@ -1,9 +1,9 @@
 {
   "paging": {
     "page": 1,
-    "count": 1,
+    "count": 2,
     "maxPage": 1,
-    "itemsTotal": 1
+    "itemsTotal": 2
   },
   "packages": [
     {
@@ -27,6 +27,28 @@
       },
       "shortDescription": "Beta for testers: Chromium for webOS 5 and newer",
       "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/chromium-beta.html"
+    },
+    {
+      "id": "org.webosatl.manager",
+      "title": "webOS ATL 32-bit beta",
+      "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
+      "manifest": {
+        "id": "org.webosatl.manager",
+        "version": "0.2.0",
+        "type": "web",
+        "title": "webOS ATL 32-bit beta",
+        "appDescription": "Beta of webOS ATL for testers: Android apps on the 32-bit runtime only (replaces webOS ATL)",
+        "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
+        "sourceUrl": "https://github.com/sarahahzub/WebOS-ATL",
+        "rootRequired": true,
+        "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.0/org.webosatl.manager_0.2.0_all.ipk",
+        "ipkHash": {
+          "sha256": "8d91b20364928b17cfeaf6ac51da8ef105e9f7762dcdd6d89ce8ed1b544d16ff"
+        },
+        "ipkSize": 353240
+      },
+      "shortDescription": "Beta for testers: webOS ATL with only the 32-bit runtime (replaces webOS ATL, needs root)",
+      "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/webosatl32-beta.html"
     }
   ]
 }

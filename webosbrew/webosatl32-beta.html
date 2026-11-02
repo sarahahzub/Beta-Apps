@@ -1,0 +1,19 @@
+<h3>webOS ATL 32-bit beta (for testers)</h3>
+<p>A test build of <b>webOS ATL</b> (Android apps on rooted LG TVs) that uses <b>only the 32-bit ATL runtime</b>.
+It has the same app id as webOS ATL, so it <b>replaces</b> an existing webOS ATL install. Your Android apps and their
+data stay; the 64-bit runtime is removed. Needs root (Homebrew Channel).</p>
+
+<h3>What's being tested in 0.2.0</h3>
+<ul>
+  <li><b>32-bit only:</b> every app runs on the 32-bit runtime (about 260 MB download). Apps that ship only 64-bit
+  (arm64-v8a) libraries are refused, with a message on the TV and in the app's log.</li>
+  <li>Tested in GitHub runner twins of an LG 43UR7500 (webOS TV Lite 10.3.1): 597 of 1043 apps worked.
+  <b>Not tested on a real TV yet.</b> LG GL and hardware video decoding are untested with this runtime.</li>
+</ul>
+
+<h3>Rollback</h3>
+<p>Reinstall webOS ATL 0.1.1 (org.webosatl.manager) from github.com/sarahahzub/WebOS-ATL/releases.</p>
+
+<h3>Please report</h3>
+<p>Your TV model, webOS version, which apps start and which don't, and the app log from webOS ATL (Android apps → the
+app → App log): github.com/sarahahzub/WebOS-ATL/issues (mention "32-bit beta 0.2.0").</p>
