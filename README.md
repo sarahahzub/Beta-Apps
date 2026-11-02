@@ -50,7 +50,7 @@ and write "Beta 0.0.47" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
-## webOS ATL 32-bit beta 0.2.0
+## webOS ATL 32-bit beta 0.2.1
 
 <img src="assets/webosatl32-beta.png" width="80" alt="webOS ATL icon">
 
@@ -59,7 +59,32 @@ With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.l
 | App | webOS ATL 32-bit beta (`org.webosatl.manager`, the same id as webOS ATL) |
 | What to test | Android apps on the **32-bit ATL runtime only** (armv7 soft-float, the TV's own ABI) |
 | Needs | A rooted TV with Homebrew Channel (aarch64 CPU, 1.2 GB RAM, 600 MB free in `/media/developer`) |
-| Size | 345 KB IPK; the manager then downloads the 257 MB runtime (`webosatl-runtime32-0.2.0.sqfs`) |
+| Size | 371 KB IPK; the manager then downloads the 257 MB runtime (`webosatl-runtime32-0.2.1.sqfs`) |
+
+**New in 0.2.1** (the manager downloads runtime 0.2.1 after the update, about 257 MB):
+
+- **USB storage (off by default).** Settings → **Storage** can move the Android runtime and the apps' data (APKs,
+  app data, caches) to a USB drive and back. The drive can be FAT32, exFAT or NTFS: the apps' data goes into one
+  ext4 image file on the drive (`webosatl/data.ext4`, 2-16 GB, at most 4 GB on FAT32), created with the TV's own
+  `mkfs.ext4`. The programs and the manager stay in internal storage. Moving closes the Android apps, copies the
+  files, checks the copy, and deletes the old copy only after the switch. The page shows the free space in internal
+  storage, on the drive and in the data image. Keep the drive plugged in: without it, Android apps don't start
+  (the TV says why) and nothing is written to internal storage instead. If the drive is pulled out, the running
+  Android apps are closed; plug it back in and they work again. At start-up webOS ATL waits up to 90 s for the drive.
+  ([issue #6](https://github.com/sarahahzub/WebOS-ATL/issues/6))
+- **Updating from webOS ATL 0.1.x or beta 0.2.0 loads the new programs.** The old service could not restart
+  itself on the TV, so setup could hang at "Preparing the download". The app now restarts an old service itself.
+- **Hardware video decoding** (per app: Android apps → the app → Hardware video decode) uses LG's Starfish
+  pipeline for H.264, HEVC and VP9; 0.2.0 shipped an older helper that the runtime could not talk to.
+- **No more black 4K video:** video that the TV has to decode in software is offered at most 1080p, so apps such
+  as SmartTube pick a size that plays.
+- **SmartTube:** use the **armeabi-v7a** (or universal) APK from SmartTube's releases. The arm64-v8a APK is
+  refused by this 32-bit build.
+- **Video decoder released on close:** the hardware video helper now always exits within 5 s when an app closes,
+  so the next app that plays video can get the decoder ("Fail to acquire SUB_SCALER resource" before).
+- **RAM:** an app's cache folder in `/tmp` (RAM on the TV) is deleted when the app stops.
+
+**0.2.0** (still true):
 
 - **32-bit only.** No 64-bit runtime is downloaded or used. Apps that ship only 64-bit (`arm64-v8a`) native
   libraries are refused: the TV shows a short message, and the app's log in webOS ATL says why.
@@ -83,15 +108,16 @@ then install **webOS ATL 32-bit beta**. Open it and press **Install** (or, after
 the runtime download on the Status page).
 
 **Developer Mode:** download the IPK from
-[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.0), then
-`ares-install -d <your-tv> org.webosatl.manager_0.2.0_all.ipk`, open webOS ATL and press **Install**.
+[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.1), then
+`ares-install -d <your-tv> org.webosatl.manager_0.2.1_all.ipk`, open webOS ATL and press **Install**.
 
 ### Report
 
-Open an issue on [WebOS-ATL](https://github.com/sarahahzub/WebOS-ATL/issues/new) and write "32-bit beta 0.2.0" in
+Open an issue on [WebOS-ATL](https://github.com/sarahahzub/WebOS-ATL/issues/new) and write "32-bit beta 0.2.1" in
 the title. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
-- whether setup finished and the Status page shows the Android runtime as 0.2.0;
+- whether setup finished and the Status page shows the Android runtime as 0.2.1;
+- if you try USB storage: the drive's file system (FAT32, exFAT, NTFS) and whether moving there and back worked;
 - which apps start and work, and which don't (app name and where you got the APK);
 - for an app that fails: its log (webOS ATL → Android apps → the app → **App log**).
 

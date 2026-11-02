@@ -3,6 +3,18 @@
 It has the same app id as webOS ATL, so it <b>replaces</b> an existing webOS ATL install. Your Android apps and their
 data stay; the 64-bit runtime is removed. Needs root (Homebrew Channel).</p>
 
+<h3>New in 0.2.1</h3>
+<ul>
+  <li><b>USB storage</b> (off by default): Settings &rarr; Storage moves the Android runtime and the apps' data to a
+  USB drive (FAT32, exFAT or NTFS; the data goes into an ext4 image file on it) and back. Android apps start only
+  while the drive is plugged in.</li>
+  <li>SmartTube: install the armeabi-v7a (or universal) APK.</li>
+  <li>The hardware video decoder is always released when an app closes; app caches in RAM are deleted when the app stops.</li>
+  <li>Updates from 0.1.x/0.2.0 now load the new programs (the old service is restarted by the app).</li>
+  <li>Hardware video decoding uses LG's Starfish pipeline (H.264, HEVC, VP9); video decoded in software is offered at most 1080p, so apps don't pick 4K they can't play.</li>
+  <li>New runtime 0.2.1 (about 260 MB download after the update).</li>
+</ul>
+
 <h3>What's being tested in 0.2.0</h3>
 <ul>
   <li><b>32-bit only:</b> every app runs on the 32-bit runtime (about 260 MB download). Apps that ship only 64-bit
@@ -16,4 +28,4 @@ data stay; the 64-bit runtime is removed. Needs root (Homebrew Channel).</p>
 
 <h3>Please report</h3>
 <p>Your TV model, webOS version, which apps start and which don't, and the app log from webOS ATL (Android apps → the
-app → App log): github.com/sarahahzub/WebOS-ATL/issues (mention "32-bit beta 0.2.0").</p>
+app → App log): github.com/sarahahzub/WebOS-ATL/issues (mention "32-bit beta 0.2.1").</p>
