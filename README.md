@@ -89,7 +89,7 @@ cat /tmp/org.nativechromium.tvprobe/report.txt
 Attach the report(s) to an issue on [WebOS-Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues) with your
 TV model.
 
-## webOS ATL 32-bit beta 0.2.1
+## webOS ATL 32-bit beta 0.2.3
 
 <img src="assets/webosatl32-beta.png" width="80" alt="webOS ATL icon">
 
@@ -98,7 +98,22 @@ TV model.
 | App | webOS ATL 32-bit beta (`org.webosatl.manager`, the same id as webOS ATL) |
 | What to test | Android apps on the **32-bit ATL runtime only** (armv7 soft-float, the TV's own ABI) |
 | Needs | A rooted TV with Homebrew Channel (aarch64 CPU, 1.2 GB RAM, 600 MB free in `/media/developer`) |
-| Size | 371 KB IPK; the manager then downloads the 257 MB runtime (`webosatl-runtime32-0.2.1.sqfs`) |
+| Size | 384 KB IPK; the manager then downloads the 225 MB runtime (`webosatl-runtime32-0.2.3.sqfs`) |
+
+**New in 0.2.3** (the manager downloads runtime 0.2.3 after the update, about 225 MB):
+
+- **Faster app starts.** Only apps with a real WebView load WebKit now; the others start about 3-4 s sooner
+  (NewPipe and SmartTube open in about 6 s on a 43UR7500, were 9-10 s). The runtime image is compressed with zstd
+  (faster to read, a bit smaller).
+- **Hardware video shows its picture.** The video plays in the app's own player area; the app's controls stay
+  visible over it, and the video is dimmed behind them.
+- **Remote in Android TV apps.** Android TV apps get arrow-key mode by default (arrows and OK as keys), so player
+  controls work with the remote.
+- **Android badge and launch splash.** Android apps get a small Android robot badge on their webOS icon and a
+  splash screen while they start. Installed apps are updated once, without a reboot.
+- **Less background load.** LG's background preloads (Netflix, YouTube, browser, ...) are paused while an Android
+  app is in front and resumed when you leave it.
+- **Runtime updates make room first**, so an update fits on TVs with little free space.
 
 **New in 0.2.1** (the manager downloads runtime 0.2.1 after the update, about 257 MB):
 
@@ -147,15 +162,15 @@ then install **webOS ATL 32-bit beta**. Open it and press **Install** (or, after
 the runtime download on the Status page).
 
 **Developer Mode:** download the IPK from
-[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.1), then
-`ares-install -d <your-tv> org.webosatl.manager_0.2.1_all.ipk`, open webOS ATL and press **Install**.
+[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.3), then
+`ares-install -d <your-tv> org.webosatl.manager_0.2.3_all.ipk`, open webOS ATL and press **Install**.
 
 ### Report
 
-Open an issue on [WebOS-ATL](https://github.com/sarahahzub/WebOS-ATL/issues/new) and write "32-bit beta 0.2.1" in
+Open an issue on [WebOS-ATL](https://github.com/sarahahzub/WebOS-ATL/issues/new) and write "32-bit beta 0.2.3" in
 the title. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
-- whether setup finished and the Status page shows the Android runtime as 0.2.1;
+- whether setup finished and the Status page shows the Android runtime as 0.2.3;
 - if you try USB storage: the drive's file system (FAT32, exFAT, NTFS) and whether moving there and back worked;
 - which apps start and work, and which don't (app name and where you got the APK);
 - for an app that fails: its log (webOS ATL → Android apps → the app → **App log**).
