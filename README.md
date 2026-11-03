@@ -24,7 +24,7 @@ behave differently on older models.
 
 **New in 0.0.50:** Chrome no longer crashes at GPU start on TVs whose graphics driver lacks
 `eglGetPlatformDisplay` (e.g. LG C1, webOS 6); it falls back to older EGL functions. The GPU still stays off by
-default on those TVs (as in 0.0.50) until testers confirm it works. To try GPU drawing (root):
+default on those TVs (as in 0.0.49) until testers confirm it works. To try GPU drawing (root):
 `echo gpu=on > /tmp/org.nativechromium.browser.beta/media.opts`, then restart the app, and report whether pages
 draw and scroll. (0.0.49 fixed the crash after the splash screen on those TVs, 0.0.47 a missing
 `libwayland-egl.so.1`.)
