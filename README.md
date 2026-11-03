@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.49
+## Chromium Beta 0.0.50
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -22,11 +22,12 @@ This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
 
-**New in 0.0.49:** fixes the crash right after the splash screen on TVs such as the LG C1 (webOS 6). Their
-graphics driver lacks a function Chrome uses to start GPU drawing (`eglGetPlatformDisplay`); the app now checks
-for it and, on those TVs, draws pages without the GPU, so scrolling may be slower there. (0.0.47 fixed a missing
-`libwayland-egl.so.1`, 0.0.46 a different start-up problem.) If videos play with sound but a black picture, or
-don't play at all, please say so in your report.
+**New in 0.0.50:** Chrome no longer crashes at GPU start on TVs whose graphics driver lacks
+`eglGetPlatformDisplay` (e.g. LG C1, webOS 6); it falls back to older EGL functions. The GPU still stays off by
+default on those TVs (as in 0.0.50) until testers confirm it works. To try GPU drawing (root):
+`echo gpu=on > /tmp/org.nativechromium.browser.beta/media.opts`, then restart the app, and report whether pages
+draw and scroll. (0.0.49 fixed the crash after the splash screen on those TVs, 0.0.47 a missing
+`libwayland-egl.so.1`.)
 
 ### Install
 
@@ -37,12 +38,12 @@ https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/apps.json
 then open **Chromium Beta** in the app list and install it.
 
 **Developer Mode:** download the IPK from [Releases](https://github.com/sarahahzub/Beta-Apps/releases), then
-`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.49_arm.ipk`.
+`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.50_arm.ipk`.
 
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.49" in the notes. Please include:
+and write "Beta 0.0.50" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
