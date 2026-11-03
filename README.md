@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.51
+## Chromium Beta 0.0.52
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -21,6 +21,11 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**New in 0.0.52:** GPU drawing on older Mali TVs (webOS 5/6, e.g. LG CX and C1), with no shim. Chrome opens
+the graphics display the way these drivers support, and the app turns the GPU on only when the TV's driver passes
+its start-up check (a Wayland display, a window surface and a test draw). If Chrome crashes soon after starting
+with the GPU on, the next start uses the GPU off. If you used the `gpushim` workaround, remove it.
 
 **New in 0.0.51:** a GPU report. On TVs where the app turns the GPU off (e.g. LG C1, webOS 6), it asks the
 TV's graphics driver once per boot what it supports and writes the answers to
@@ -43,12 +48,12 @@ https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/apps.json
 then open **Chromium Beta** in the app list and install it.
 
 **Developer Mode:** download the IPK from [Releases](https://github.com/sarahahzub/Beta-Apps/releases), then
-`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.51_arm.ipk`.
+`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.52_arm.ipk`.
 
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.51" in the notes. Please include:
+and write "Beta 0.0.52" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
