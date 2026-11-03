@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.50
+## Chromium Beta 0.0.51
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -21,6 +21,11 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**New in 0.0.51:** a GPU report. On TVs where the app turns the GPU off (e.g. LG C1, webOS 6), it asks the
+TV's graphics driver once per boot what it supports and writes the answers to
+`/tmp/org.nativechromium.browser.beta/media.log` (lines starting with `gpuprobe:`). If you have such a TV and
+root access, please attach that file to your report.
 
 **New in 0.0.50:** Chrome no longer crashes at GPU start on TVs whose graphics driver lacks
 `eglGetPlatformDisplay` (e.g. LG C1, webOS 6); it falls back to older EGL functions. The GPU still stays off by
@@ -38,12 +43,12 @@ https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/apps.json
 then open **Chromium Beta** in the app list and install it.
 
 **Developer Mode:** download the IPK from [Releases](https://github.com/sarahahzub/Beta-Apps/releases), then
-`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.50_arm.ipk`.
+`ares-install -d <your-tv> org.nativechromium.browser.beta_0.0.51_arm.ipk`.
 
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.50" in the notes. Please include:
+and write "Beta 0.0.51" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;

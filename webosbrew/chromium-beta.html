@@ -2,14 +2,15 @@
 <p>A test build of <b>WebOS Chromium</b>. It installs <b>next to</b> the normal Chromium app with its own icon,
 settings and bookmarks, so it can't break your normal install. Remove it any time.</p>
 
-<h3>What's being tested in 0.0.50</h3>
+<h3>What's being tested in 0.0.51</h3>
 <ul>
   <li><b>Older TVs:</b> this build is meant to run on <b>webOS 5 (2020) and newer</b>; the normal app needs webOS 9.</li>
   <li><b>Fixed:</b> the crash right after the splash screen on TVs whose graphics driver is older (e.g. LG C1, webOS 6).
   Those TVs draw pages without the GPU by default; GPU drawing can be tried with <code>gpu=on</code>.</li>
+  <li><b>New:</b> a GPU report in <code>/tmp/org.nativechromium.browser.beta/media.log</code> on TVs where the GPU is off.</li>
   <li>Hardware video, GPU drawing and the remote on those older models.</li>
 </ul>
 
 <h3>Please report</h3>
 <p>Your TV model, webOS version, and whether it starts, plays YouTube smoothly and works with the remote:
-github.com/sarahahzub/WebOS-Chromium (TV compatibility report, mention "Beta 0.0.50").</p>
+github.com/sarahahzub/WebOS-Chromium (TV compatibility report, mention "Beta 0.0.51").</p>
