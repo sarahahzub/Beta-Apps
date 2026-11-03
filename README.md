@@ -62,6 +62,33 @@ and write "Beta 0.0.52" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
+## TV Probe 0.1.0
+
+<img src="assets/tvprobe.png" width="80" alt="TV Probe icon">
+
+| | |
+|---|---|
+| App | TV Probe (`org.nativechromium.tvprobe`) |
+| What it does | Checks what your TV supports and writes a report. Changes nothing on the TV. |
+| Runs on | Any webOS version (built for glibc 2.17, no other dependencies) |
+| Size | 57 KB |
+
+TV Probe helps decide what it takes to support a webOS version (for example webOS 4) before building anything. It
+reports webOS, glibc and kernel versions, the app sandbox, every library and symbol the Chromium Beta browser needs
+and which of them this TV lacks, Wayland and the TV's own webOS protocol tables, the GPU (with a test draw), LG's
+hardware video library, and memory.
+
+**Use:** install it from the Homebrew Channel (same repository as above) or the
+[release](https://github.com/sarahahzub/Beta-Apps/releases/tag/tvprobe-v0.1.0), open it once and wait for the message.
+The report is in `/tmp/org.nativechromium.tvprobe/report.txt`. With root, please also run it as root and send both
+reports:
+```
+/media/developer/apps/usr/palm/applications/org.nativechromium.tvprobe/bin/run
+cat /tmp/org.nativechromium.tvprobe/report.txt
+```
+Attach the report(s) to an issue on [WebOS-Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues) with your
+TV model.
+
 ## webOS ATL 32-bit beta 0.2.1
 
 <img src="assets/webosatl32-beta.png" width="80" alt="webOS ATL icon">
