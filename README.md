@@ -89,7 +89,7 @@ cat /tmp/org.nativechromium.tvprobe/report.txt
 Attach the report(s) to an issue on [WebOS-Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues) with your
 TV model.
 
-## webOS ATL 32-bit beta 0.2.3
+## webOS ATL 32-bit beta 0.2.4
 
 <img src="assets/webosatl32-beta.png" width="80" alt="webOS ATL icon">
 
@@ -97,8 +97,10 @@ TV model.
 |---|---|
 | App | webOS ATL 32-bit beta (`org.webosatl.manager`, the same id as webOS ATL) |
 | What to test | Android apps on the **32-bit ATL runtime only** (armv7 soft-float, the TV's own ABI) |
-| Needs | A rooted TV with Homebrew Channel (aarch64 CPU, 1.2 GB RAM, 600 MB free in `/media/developer`) |
+| Needs | A rooted TV with Homebrew Channel (ARM CPU, 32- or 64-bit; 1.2 GB RAM; 600 MB free in `/media/developer`) |
 | Size | 384 KB IPK; the manager then downloads the 225 MB runtime (`webosatl-runtime32-0.2.3.sqfs`) |
+
+**New in 0.2.4**: setup also accepts 32-bit ARM TVs (armv7l kernels such as webOS 4.4, untested), and TVs whose kernel has no squashfs zstd (Linux older than 4.14) get the gzip runtime. 64-bit TVs keep runtime 0.2.3.
 
 **New in 0.2.3** (the manager downloads runtime 0.2.3 after the update, about 225 MB):
 
@@ -162,8 +164,8 @@ then install **webOS ATL 32-bit beta**. Open it and press **Install** (or, after
 the runtime download on the Status page).
 
 **Developer Mode:** download the IPK from
-[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.3), then
-`ares-install -d <your-tv> org.webosatl.manager_0.2.3_all.ipk`, open webOS ATL and press **Install**.
+[the release](https://github.com/sarahahzub/Beta-Apps/releases/tag/webosatl32-beta-v0.2.4), then
+`ares-install -d <your-tv> org.webosatl.manager_0.2.4_all.ipk`, open webOS ATL and press **Install**.
 
 ### Report
 
