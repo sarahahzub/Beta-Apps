@@ -1,0 +1,17 @@
+<h3>Chromium Beta WebOS 4 (for webOS 4 testers)</h3>
+<p>The first test build of <b>WebOS Chromium</b> for <b>webOS 4.4</b> TVs. It's a separate app with its own icon,
+settings and bookmarks. It doesn't change Chromium or Chromium Beta, and you can remove it any time.
+On webOS 5 and newer, use Chromium Beta instead.</p>
+
+<h3>What's being tested in 0.0.53</h3>
+<ul>
+  <li>Built for glibc 2.24 (webOS 4.4), with its own NSS and NSPR libraries, which webOS 4 doesn't have.</li>
+  <li>Works without the Wayland interfaces webOS 4 lacks.</li>
+  <li>Hardware video through LG's older NDL decoder (H.264). If that fails, it switches to software decoding.</li>
+</ul>
+
+<h3>Please report</h3>
+<p>Your TV model, webOS version, and whether it starts, opens websites, plays YouTube and works with the remote.
+With root: <code>media.log</code>, <code>browser.log</code> and <code>start-check.log</code> from
+<code>/tmp/org.nativechromium.browser.webos4/</code>. Report on github.com/sarahahzub/WebOS-Chromium
+(mention "Beta WebOS 4 0.0.53").</p>

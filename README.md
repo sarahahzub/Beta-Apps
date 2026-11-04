@@ -62,6 +62,23 @@ and write "Beta 0.0.52" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
+## Chromium Beta WebOS 4 0.0.53
+
+<img src="assets/chromium-beta-webos4.png" width="80" alt="Chromium Beta WebOS 4 icon">
+
+| | |
+|---|---|
+| App | Chromium Beta WebOS 4 (`org.nativechromium.browser.webos4`) |
+| What to test | First build for **webOS 4.4** TVs. A separate app: Chromium and Chromium Beta stay as they are. |
+| Built against | glibc 2.24; ships its own NSS 3.125 and NSPR 4.38.2 (webOS 4 has none) |
+| Size | 107 MB download, about 182 MB installed |
+
+Only for testers with a webOS 4 TV; on webOS 5 and newer use Chromium Beta. Hardware video uses LG's older NDL
+decoder (H.264) and switches to software decoding if that fails. Install it from the Homebrew Channel (same
+repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.53),
+and see the release notes for what to test. Logs (root): `media.log`, `browser.log` and `start-check.log` in
+`/tmp/org.nativechromium.browser.webos4/`.
+
 ## TV Probe 0.1.1
 
 <img src="assets/tvprobe.png" width="80" alt="TV Probe icon">
