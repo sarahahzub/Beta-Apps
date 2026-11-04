@@ -1,15 +1,15 @@
 {
   "id": "org.nativechromium.tvprobe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "native",
   "title": "TV Probe",
   "appDescription": "Reports what this TV supports (libraries, sandbox, Wayland, GPU, hardware video) for webOS support planning",
   "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/tvprobe.png",
   "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
   "rootRequired": false,
-  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/tvprobe-v0.1.0/org.nativechromium.tvprobe_0.1.0_arm.ipk",
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/tvprobe-v0.1.1/org.nativechromium.tvprobe_0.1.1_arm.ipk",
   "ipkHash": {
-    "sha256": "19f91c21dc0deb87a4fc77aa5f7b9dd93a0a101166b763a747312c11281f8195"
+    "sha256": "1a82ea4cb8051f03b7f86d7d239795faa710e8bd2407be6de1f231036bc9f11e"
   },
-  "ipkSize": 57280
+  "ipkSize": 1317152
 }

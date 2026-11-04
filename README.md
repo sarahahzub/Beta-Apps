@@ -62,7 +62,7 @@ and write "Beta 0.0.52" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
-## TV Probe 0.1.0
+## TV Probe 0.1.1
 
 <img src="assets/tvprobe.png" width="80" alt="TV Probe icon">
 
@@ -71,7 +71,7 @@ With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.l
 | App | TV Probe (`org.nativechromium.tvprobe`) |
 | What it does | Checks what your TV supports and writes a report. Changes nothing on the TV. |
 | Runs on | Any webOS version (built for glibc 2.17, no other dependencies) |
-| Size | 57 KB |
+| Size | 1.3 MB (includes a 10 s test clip) |
 
 TV Probe helps decide what it takes to support a webOS version (for example webOS 4) before building anything. It
 reports webOS, glibc and kernel versions, the app sandbox, every library and symbol the Chromium Beta browser needs
@@ -79,7 +79,7 @@ and which of them this TV lacks, Wayland and the TV's own webOS protocol tables,
 hardware video library, and memory.
 
 **Use:** install it from the Homebrew Channel (same repository as above) or the
-[release](https://github.com/sarahahzub/Beta-Apps/releases/tag/tvprobe-v0.1.0), open it once and wait for the message.
+[release](https://github.com/sarahahzub/Beta-Apps/releases/tag/tvprobe-v0.1.1), open it once and wait for the message.
 The report is in `/tmp/org.nativechromium.tvprobe/report.txt`. With root, please also run it as root and send both
 reports:
 ```
@@ -87,7 +87,15 @@ reports:
 cat /tmp/org.nativechromium.tvprobe/report.txt
 ```
 Attach the report(s) to an issue on [WebOS-Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues) with your
-TV model.
+TV model. The reports contain the TV's serial number and network addresses: send them privately if you prefer.
+
+**Hardware video test (webOS 4, optional, about 12 s, root):** plays a test pattern through LG's NDL v1 decoder full
+screen. Watch the TV while it runs and say what you saw:
+```
+/media/developer/apps/usr/palm/applications/org.nativechromium.tvprobe/bin/run ndltest
+```
+If nothing shows, try `... bin/run ndltest src0`. **New in 0.1.1:** this test, checks of the other hardware video
+routes (Starfish/ACB, LGNC, GStreamer) and libstdc++, and a fix for the device and certificate checks.
 
 ## webOS ATL 32-bit beta 0.2.4
 
