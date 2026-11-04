@@ -62,7 +62,7 @@ and write "Beta 0.0.52" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
-## Chromium Beta WebOS 4 0.0.53
+## Chromium Beta WebOS 4 0.0.54
 
 <img src="assets/chromium-beta-webos4.png" width="80" alt="Chromium Beta WebOS 4 icon">
 
@@ -74,8 +74,11 @@ With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.l
 | Size | 107 MB download, about 182 MB installed |
 
 Only for testers with a webOS 4 TV; on webOS 5 and newer use Chromium Beta. Hardware video uses LG's older NDL
-decoder (H.264) and switches to software decoding if that fails. Install it from the Homebrew Channel (same
-repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.53),
+decoder (H.264) and switches to software decoding if that fails.
+
+**New in 0.0.54:** video no longer closes the app. Sites are offered only H.264 (up to 1080p30), which the TV's
+decoder plays; 0.0.53 let YouTube pick VP9/AV1, which was decoded in software and used up the TV's memory. Install it from the Homebrew Channel (same
+repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.54),
 and see the release notes for what to test. Logs (root): `media.log`, `browser.log` and `start-check.log` in
 `/tmp/org.nativechromium.browser.webos4/`.
 
