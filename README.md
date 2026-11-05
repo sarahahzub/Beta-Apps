@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.53
+## Chromium Beta 0.0.54
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -21,6 +21,11 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**New in 0.0.54 (Beta) / 0.0.56 (WebOS 4):** Enter works on the first press (LG keyboard, google.com suggestions);
+the remote's Play/Pause buttons (and buttons mapped to them) control videos; Google search uses the desktop version,
+so its "Web" filter works; a launch parameter `{"target": "https://..."}` opens that page; after a freeze or forced
+restart the previous session's logs are in `<app>/data/lastlog.prev/`.
 
 **New in 0.0.53:** a remote and pointer log: if the pointer, scrolling or keys don't work, press the arrows, OK and Back,
 use the pointer, then send `grep cn-input /tmp/org.nativechromium.browser.beta/browser.log`. WebGPU is off (a
@@ -58,7 +63,7 @@ then open **Chromium Beta** in the app list and install it.
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.53" in the notes. Please include:
+and write "Beta 0.0.54" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
@@ -67,7 +72,7 @@ and write "Beta 0.0.53" in the notes. Please include:
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
 
-## Chromium Beta WebOS 4 0.0.55
+## Chromium Beta WebOS 4 0.0.56
 
 <img src="assets/chromium-beta-webos4.png" width="80" alt="Chromium Beta WebOS 4 icon">
 
@@ -81,13 +86,18 @@ With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.l
 Only for testers with a webOS 4 TV; on webOS 5 and newer use Chromium Beta. Hardware video uses LG's older NDL
 decoder (H.264) and switches to software decoding if that fails.
 
+**New in 0.0.54 (Beta) / 0.0.56 (WebOS 4):** Enter works on the first press (LG keyboard, google.com suggestions);
+the remote's Play/Pause buttons (and buttons mapped to them) control videos; Google search uses the desktop version,
+so its "Web" filter works; a launch parameter `{"target": "https://..."}` opens that page; after a freeze or forced
+restart the previous session's logs are in `<app>/data/lastlog.prev/`.
+
 **New in 0.0.55:** WebGPU is off (a WebGPU page closed the app on an LG C9), and `browser.log` has `cn-input:`
 lines for the remote and pointer problems: please send `grep cn-input /tmp/org.nativechromium.browser.webos4/browser.log`
 after pressing the arrows, OK and Back and using the pointer.
 
 **New in 0.0.54:** video no longer closes the app. Sites are offered only H.264 (up to 1080p30), which the TV's
 decoder plays; 0.0.53 let YouTube pick VP9/AV1, which was decoded in software and used up the TV's memory. Install it from the Homebrew Channel (same
-repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.55),
+repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.56),
 and see the release notes for what to test. Logs (root): `media.log`, `browser.log` and `start-check.log` in
 `/tmp/org.nativechromium.browser.webos4/`.
 
