@@ -2,8 +2,9 @@
 <p>A test build of <b>WebOS Chromium</b>. It installs <b>next to</b> the normal Chromium app with its own icon,
 settings and bookmarks, so it can't break your normal install. Remove it any time.</p>
 
-<h3>What's being tested in 0.0.54</h3>
+<h3>What's being tested in 0.0.55</h3>
 <ul>
+  <li><b>New:</b> WebGL works; likely fix for the Magic Remote pointer on older TVs (clicks and scrolling did nothing).</li>
   <li><b>New:</b> Enter works on the first press; Play/Pause buttons control videos; Google uses its desktop version ("Web" filter works); logs of the previous session survive a restart (<code>&lt;app&gt;/data/lastlog.prev/</code>).</li>
   <li><b>New:</b> a remote and pointer log (<code>cn-input:</code> lines in browser.log) for TVs where the pointer, scrolling or keys don't work; WebGPU off; built for glibc 2.24 with its own NSS.</li>
   <li><b>Older TVs:</b> this build is meant to run on <b>webOS 5 (2020) and newer</b>; the normal app needs webOS 9.</li>
@@ -16,4 +17,4 @@ settings and bookmarks, so it can't break your normal install. Remove it any tim
 
 <h3>Please report</h3>
 <p>Your TV model, webOS version, and whether it starts, plays YouTube smoothly and works with the remote:
-github.com/sarahahzub/WebOS-Chromium (TV compatibility report, mention "Beta 0.0.54").</p>
+github.com/sarahahzub/WebOS-Chromium (TV compatibility report, mention "Beta 0.0.55").</p>

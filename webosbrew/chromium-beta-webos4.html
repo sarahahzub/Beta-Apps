@@ -3,8 +3,9 @@
 settings and bookmarks. It doesn't change Chromium or Chromium Beta, and you can remove it any time.
 On webOS 5 and newer, use Chromium Beta instead.</p>
 
-<h3>What's being tested in 0.0.56</h3>
+<h3>What's being tested in 0.0.57</h3>
 <ul>
+  <li><b>New:</b> WebGL works; likely fix for the Magic Remote pointer on older TVs (clicks and scrolling did nothing).</li>
   <li><b>New:</b> Enter works on the first press; Play/Pause buttons control videos; Google uses its desktop version ("Web" filter works); logs of the previous session survive a restart (<code>&lt;app&gt;/data/lastlog.prev/</code>).</li>
   <li>Built for glibc 2.24 (webOS 4.4), with its own NSS and NSPR libraries, which webOS 4 doesn't have.</li>
   <li>Works without the Wayland interfaces webOS 4 lacks. WebGPU is off.</li>
@@ -16,4 +17,4 @@ On webOS 5 and newer, use Chromium Beta instead.</p>
 <p>Your TV model, webOS version, and whether it starts, opens websites, plays YouTube and works with the remote.
 With root: <code>media.log</code>, <code>browser.log</code> and <code>start-check.log</code> from
 <code>/tmp/org.nativechromium.browser.webos4/</code>. Report on github.com/sarahahzub/WebOS-Chromium
-(mention "Beta WebOS 4 0.0.56").</p>
+(mention "Beta WebOS 4 0.0.57").</p>
