@@ -4,11 +4,12 @@ settings and bookmarks, so it can't break your normal install. Remove it any tim
 
 <h3>What's being tested in 0.0.56</h3>
 <ul>
+  <li><b>webOS 4:</b> the separate webOS 4 test app is merged into Chromium Beta; one build for webOS 4.4 and newer.</li>
   <li><b>New:</b> WebRTC H.264 (video calls and casting pages).</li>
   <li><b>New:</b> WebGL works; likely fix for the Magic Remote pointer on older TVs (clicks and scrolling did nothing).</li>
   <li><b>New:</b> Enter works on the first press; Play/Pause buttons control videos; Google uses its desktop version ("Web" filter works); logs of the previous session survive a restart (<code>&lt;app&gt;/data/lastlog.prev/</code>).</li>
   <li><b>New:</b> a remote and pointer log (<code>cn-input:</code> lines in browser.log) for TVs where the pointer, scrolling or keys don't work; WebGPU off; built for glibc 2.24 with its own NSS.</li>
-  <li><b>Older TVs:</b> this build is meant to run on <b>webOS 5 (2020) and newer</b>; the normal app needs webOS 9.</li>
+  <li><b>Older TVs:</b> this build is meant to run on <b>webOS 4.4 (2018-2019) and newer</b>; the normal app needs webOS 9.</li>
   <li><b>Fixed:</b> the crash right after the splash screen on TVs whose graphics driver is older (e.g. LG C1, webOS 6).
   Those TVs draw pages without the GPU by default; GPU drawing can be tried with <code>gpu=on</code>.</li>
   <li><b>New:</b> GPU drawing on older Mali TVs (webOS 5/6) when the TV's driver passes the start-up check.</li>

@@ -3,7 +3,7 @@
   "version": "0.0.56",
   "type": "native",
   "title": "Chromium Beta",
-  "appDescription": "Beta of WebOS Chromium for testers: build for webOS 5 and newer",
+  "appDescription": "Beta of WebOS Chromium for testers: one build for webOS 4.4 and newer",
   "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta.png",
   "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
   "rootRequired": false,

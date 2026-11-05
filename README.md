@@ -14,13 +14,18 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 | | |
 |---|---|
 | App | Chromium Beta (`org.nativechromium.browser.beta`) |
-| What to test | Runs on **webOS 5 (2020) and newer**. The normal Chromium needs webOS 9. |
+| What to test | Runs on **webOS 4.4 (2018-2019) and newer**: one build for all older TVs. The normal Chromium needs webOS 9. |
 | Built against | glibc 2.24 and the libwayland API that every webOS since 5 has; ships its own NSS and NSPR |
 | Size | 105 MB download, about 178 MB installed |
 
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**webOS 4 merged into Chromium Beta (0.0.56):** the separate "Chromium Beta WebOS 4" app is retired. Chromium Beta is
+the same build (glibc 2.24, its own NSS/NSPR, webOS 4 Wayland fixes, LG's older NDL video decoder on webOS 4) and
+runs on webOS 4.4 and newer. webOS 4 testers: install Chromium Beta, then remove Chromium Beta WebOS 4 (bookmarks and
+settings don't carry over, the apps have different ids).
 
 **New in 0.0.56 (Beta) / 0.0.58 (WebOS 4):** WebRTC H.264 (before only VP8/VP9/AV1, so H.264 casting such as a Meta
 Quest found no common codec); on webOS 4 a failed call to LG's decoder now switches to software decoding for that
@@ -79,43 +84,6 @@ and write "Beta 0.0.56" in the notes. Please include:
 
 If it doesn't start, the TV shows a short message when the webOS version is too old; please include that text.
 With SSH access, `/tmp/org.nativechromium.browser.beta/media.log` and `browser.log` help a lot.
-
-## Chromium Beta WebOS 4 0.0.58
-
-<img src="assets/chromium-beta-webos4.png" width="80" alt="Chromium Beta WebOS 4 icon">
-
-| | |
-|---|---|
-| App | Chromium Beta WebOS 4 (`org.nativechromium.browser.webos4`) |
-| What to test | First build for **webOS 4.4** TVs. A separate app: Chromium and Chromium Beta stay as they are. |
-| Built against | glibc 2.24; ships its own NSS 3.125 and NSPR 4.38.2 (webOS 4 has none) |
-| Size | 107 MB download, about 182 MB installed |
-
-Only for testers with a webOS 4 TV; on webOS 5 and newer use Chromium Beta. Hardware video uses LG's older NDL
-decoder (H.264) and switches to software decoding if that fails.
-
-**New in 0.0.56 (Beta) / 0.0.58 (WebOS 4):** WebRTC H.264 (before only VP8/VP9/AV1, so H.264 casting such as a Meta
-Quest found no common codec); on webOS 4 a failed call to LG's decoder now switches to software decoding for that
-session only.
-
-**New in 0.0.55 (Beta) / 0.0.57 (WebOS 4):** WebGL works (it was unavailable in every earlier build), and a likely
-fix for the Magic Remote pointer on older TVs (clicks and scrolling did nothing): the window now accepts pointer input
-everywhere. If the pointer still doesn't work, send `grep cn-input /tmp/<app id>/browser.log`.
-
-**New in 0.0.54 (Beta) / 0.0.56 (WebOS 4):** Enter works on the first press (LG keyboard, google.com suggestions);
-the remote's Play/Pause buttons (and buttons mapped to them) control videos; Google search uses the desktop version,
-so its "Web" filter works; a launch parameter `{"target": "https://..."}` opens that page; after a freeze or forced
-restart the previous session's logs are in `<app>/data/lastlog.prev/`.
-
-**New in 0.0.55:** WebGPU is off (a WebGPU page closed the app on an LG C9), and `browser.log` has `cn-input:`
-lines for the remote and pointer problems: please send `grep cn-input /tmp/org.nativechromium.browser.webos4/browser.log`
-after pressing the arrows, OK and Back and using the pointer.
-
-**New in 0.0.54:** video no longer closes the app. Sites are offered only H.264 (up to 1080p30), which the TV's
-decoder plays; 0.0.53 let YouTube pick VP9/AV1, which was decoded in software and used up the TV's memory. Install it from the Homebrew Channel (same
-repository as below) or the [release](https://github.com/sarahahzub/Beta-Apps/releases/tag/chromium-beta-webos4-v0.0.58),
-and see the release notes for what to test. Logs (root): `media.log`, `browser.log` and `start-check.log` in
-`/tmp/org.nativechromium.browser.webos4/`.
 
 ## TV Probe 0.1.1
 

@@ -1,9 +1,9 @@
 {
   "paging": {
     "page": 1,
-    "count": 4,
+    "count": 3,
     "maxPage": 1,
-    "itemsTotal": 4
+    "itemsTotal": 3
   },
   "packages": [
     {
@@ -15,7 +15,7 @@
         "version": "0.0.56",
         "type": "native",
         "title": "Chromium Beta",
-        "appDescription": "Beta of WebOS Chromium for testers: build for webOS 5 and newer",
+        "appDescription": "Beta of WebOS Chromium for testers: one build for webOS 4.4 and newer",
         "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta.png",
         "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
         "rootRequired": false,
@@ -25,30 +25,8 @@
         },
         "ipkSize": 107316382
       },
-      "shortDescription": "Beta for testers: Chromium for webOS 5 and newer",
+      "shortDescription": "Beta for testers: Chromium for webOS 4.4 and newer",
       "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/chromium-beta.html"
-    },
-    {
-      "id": "org.nativechromium.browser.webos4",
-      "title": "Chromium Beta WebOS 4",
-      "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta-webos4.png",
-      "manifest": {
-        "id": "org.nativechromium.browser.webos4",
-        "version": "0.0.58",
-        "type": "native",
-        "title": "Chromium Beta WebOS 4",
-        "appDescription": "Test build of WebOS Chromium for webOS 4.4 TVs (separate app)",
-        "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta-webos4.png",
-        "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
-        "rootRequired": false,
-        "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/chromium-beta-webos4-v0.0.58/org.nativechromium.browser.webos4_0.0.58_arm.ipk",
-        "ipkHash": {
-          "sha256": "a2e942a2caf4ba6e52e92967680e8f7a11ff835ed4246082a8307ba78faa7dd6"
-        },
-        "ipkSize": 107317272
-      },
-      "shortDescription": "Test build for webOS 4.4 TVs only: Chromium as a separate app",
-      "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/chromium-beta-webos4.html"
     },
     {
       "id": "org.webosatl.manager",
