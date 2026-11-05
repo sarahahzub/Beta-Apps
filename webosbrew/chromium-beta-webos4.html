@@ -3,10 +3,11 @@
 settings and bookmarks. It doesn't change Chromium or Chromium Beta, and you can remove it any time.
 On webOS 5 and newer, use Chromium Beta instead.</p>
 
-<h3>What's being tested in 0.0.54</h3>
+<h3>What's being tested in 0.0.55</h3>
 <ul>
   <li>Built for glibc 2.24 (webOS 4.4), with its own NSS and NSPR libraries, which webOS 4 doesn't have.</li>
-  <li>Works without the Wayland interfaces webOS 4 lacks.</li>
+  <li>Works without the Wayland interfaces webOS 4 lacks. WebGPU is off.</li>
+  <li><b>Remote/pointer log:</b> after pressing the arrows, OK, Back and using the pointer, send the <code>cn-input:</code> lines of <code>browser.log</code>.</li>
   <li>Hardware video through LG's older NDL decoder: sites are offered only H.264 (up to 1080p30). If that fails, it switches to software decoding (720p).</li>
 </ul>
 
@@ -14,4 +15,4 @@ On webOS 5 and newer, use Chromium Beta instead.</p>
 <p>Your TV model, webOS version, and whether it starts, opens websites, plays YouTube and works with the remote.
 With root: <code>media.log</code>, <code>browser.log</code> and <code>start-check.log</code> from
 <code>/tmp/org.nativechromium.browser.webos4/</code>. Report on github.com/sarahahzub/WebOS-Chromium
-(mention "Beta WebOS 4 0.0.54").</p>
+(mention "Beta WebOS 4 0.0.55").</p>

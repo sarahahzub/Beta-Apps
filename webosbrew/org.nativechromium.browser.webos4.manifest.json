@@ -1,15 +1,15 @@
 {
   "id": "org.nativechromium.browser.webos4",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "type": "native",
   "title": "Chromium Beta WebOS 4",
   "appDescription": "Test build of WebOS Chromium for webOS 4.4 TVs (separate app)",
   "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta-webos4.png",
   "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
   "rootRequired": false,
-  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/chromium-beta-webos4-v0.0.54/org.nativechromium.browser.webos4_0.0.54_arm.ipk",
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/chromium-beta-webos4-v0.0.55/org.nativechromium.browser.webos4_0.0.55_arm.ipk",
   "ipkHash": {
-    "sha256": "f8d024e8b3b6d7297f413df88cf49dec9c0deb67be8b624bcec5c036a7f9cc27"
+    "sha256": "5f250df4ec2d2261b76b1814b96706e9bac882f4df0f4e81039c6fe73cab6f51"
   },
-  "ipkSize": 107142130
+  "ipkSize": 107152884
 }
