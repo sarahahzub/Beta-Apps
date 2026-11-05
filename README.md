@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.56
+## Chromium Beta 0.0.57
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -21,6 +21,9 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**New in 0.0.57:** launch parameter `"fullscreen": true`; on webOS 4, frame-timing lines in `media.log` and the
+`media.opts` test options `lead=N` and `pts=us` for the 1080p stutter (see the release notes).
 
 **webOS 4 merged into Chromium Beta (0.0.56):** the separate "Chromium Beta WebOS 4" app is retired. Chromium Beta is
 the same build (glibc 2.24, its own NSS/NSPR, webOS 4 Wayland fixes, LG's older NDL video decoder on webOS 4) and
@@ -76,7 +79,7 @@ then open **Chromium Beta** in the app list and install it.
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.56" in the notes. Please include:
+and write "Beta 0.0.57" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
