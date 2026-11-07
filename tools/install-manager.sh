@@ -2,7 +2,7 @@
 # install-manager.sh [IPK URL]: install the webOS ATL manager on a rooted TV from SSH or telnet and, if the TV
 # refuses the package, print the reason from the TV's own log (Homebrew Channel only shows "-5: ipk verified failed").
 #   curl -fsSL https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/tools/install-manager.sh | sh
-URL=${1:-https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.8/org.webosatl.manager_0.2.8_all.ipk}
+URL=${1:-https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.9/org.webosatl.manager_0.2.9_all.ipk}
 T=/tmp/webosatl-manager.ipk
 echo "== TV: $(cat /etc/prefs/properties/machineName 2>/dev/null) $(grep -o 'webos_release[^,]*' /var/run/nyx/os_info.json 2>/dev/null) $(uname -m)"
 echo "== free: RAM $(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo) MB, apps $(df -m /media/developer 2>/dev/null | awk 'NR==2{print $4}') MB"
