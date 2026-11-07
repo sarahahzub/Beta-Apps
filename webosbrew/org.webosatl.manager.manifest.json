@@ -1,15 +1,15 @@
 {
   "id": "org.webosatl.manager",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "type": "web",
   "title": "webOS ATL 32-bit beta",
   "appDescription": "Beta of webOS ATL for testers: Android apps on the 32-bit runtime only (replaces webOS ATL)",
   "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
   "sourceUrl": "https://github.com/sarahahzub/WebOS-ATL",
   "rootRequired": true,
-  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.7/org.webosatl.manager_0.2.7_all.ipk",
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.8/org.webosatl.manager_0.2.8_all.ipk",
   "ipkHash": {
-    "sha256": "512e5e0cacdb7872e6fe12f302c315d54c7f9ff5583429ccd0629a66399bac14"
+    "sha256": "ce22437d7a3f0d3df9e20fd6066e8dd9f4d6cdd1465a00f2a2fcd05f11c7aed8"
   },
-  "ipkSize": 436854
+  "ipkSize": 436849
 }
