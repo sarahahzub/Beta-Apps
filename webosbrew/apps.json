@@ -34,18 +34,18 @@
       "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
       "manifest": {
         "id": "org.webosatl.manager",
-        "version": "0.2.6",
+        "version": "0.2.7",
         "type": "web",
         "title": "webOS ATL 32-bit beta",
         "appDescription": "Beta of webOS ATL for testers: Android apps on the 32-bit runtime only (replaces webOS ATL)",
         "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
         "sourceUrl": "https://github.com/sarahahzub/WebOS-ATL",
         "rootRequired": true,
-        "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.6/org.webosatl.manager_0.2.6_all.ipk",
+        "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.7/org.webosatl.manager_0.2.7_all.ipk",
         "ipkHash": {
-          "sha256": "216d9e4d943405e8936c159dabb7ea8a2299d11d64f9ece402a12f70e1f92829"
+          "sha256": "512e5e0cacdb7872e6fe12f302c315d54c7f9ff5583429ccd0629a66399bac14"
         },
-        "ipkSize": 436862
+        "ipkSize": 436854
       },
       "shortDescription": "Beta for testers: webOS ATL with only the 32-bit runtime (replaces webOS ATL, needs root)",
       "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/webosatl32-beta.html"
