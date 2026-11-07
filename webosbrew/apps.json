@@ -43,9 +43,9 @@
         "rootRequired": true,
         "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.8/org.webosatl.manager_0.2.8_all.ipk",
         "ipkHash": {
-          "sha256": "ce22437d7a3f0d3df9e20fd6066e8dd9f4d6cdd1465a00f2a2fcd05f11c7aed8"
+          "sha256": "6dcaf42a1f25d55205d459caed7f1fca7206d34c47851c03b4862a9fc26cb93d"
         },
-        "ipkSize": 436849
+        "ipkSize": 436876
       },
       "shortDescription": "Beta for testers: webOS ATL with only the 32-bit runtime (replaces webOS ATL, needs root)",
       "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/webosatl32-beta.html"
