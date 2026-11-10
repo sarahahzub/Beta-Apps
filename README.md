@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.59
+## Chromium Beta 0.0.60
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -21,6 +21,8 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
+
+**New in 0.0.60:** the screen saver comes back when a video is paused (0.0.59 kept it away on webOS 4 even while paused).
 
 **New in 0.0.59:** screen saver fix, second try (0.0.58's answer to webOS was ignored).
 
@@ -84,7 +86,7 @@ then open **Chromium Beta** in the app list and install it.
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.59" in the notes. Please include:
+and write "Beta 0.0.60" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
