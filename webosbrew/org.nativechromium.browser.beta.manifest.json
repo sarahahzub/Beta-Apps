@@ -1,15 +1,15 @@
 {
   "id": "org.nativechromium.browser.beta",
-  "version": "0.0.61",
+  "version": "0.0.62",
   "type": "native",
   "title": "Chromium Beta",
   "appDescription": "Beta of WebOS Chromium for testers: one build for webOS 4.4 and newer",
   "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/chromium-beta.png",
   "sourceUrl": "https://github.com/sarahahzub/WebOS-Chromium",
   "rootRequired": false,
-  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/chromium-beta-v0.0.61/org.nativechromium.browser.beta_0.0.61_arm.ipk",
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/chromium-beta-v0.0.62/org.nativechromium.browser.beta_0.0.62_arm.ipk",
   "ipkHash": {
-    "sha256": "133d6b561a364d9eed7e87ec9ea6d83bf6cc36e2accf1d5fe92561332ba171aa"
+    "sha256": "b320c88342ede3a6dc90d235c45b9c1fba1f62446ac4a13729c54ed9a202f06b"
   },
-  "ipkSize": 107316796
+  "ipkSize": 107317294
 }
