@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.63
+## Chromium Beta 0.0.64
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -22,7 +22,9 @@ This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
 
-**New in 0.0.63 (release candidate for the next Stable):** bookmarks and settings are kept on every TV: the package brings its own writable `data` folder (on some TVs, e.g. webOS 5, the profile still lived in RAM). Smoother video on some TVs: the threads that pace video and frames keep webOS's priority.
+**New in 0.0.64 (release candidate for the next Stable):** Cloudflare "Just a moment..." pages, second try: that page comes on the site's own address, so TV Tools now changes nothing on 403/503 pages.
+
+**New in 0.0.63:** bookmarks and settings are kept on every TV: the package brings its own writable `data` folder (on some TVs, e.g. webOS 5, the profile still lived in RAM). Smoother video on some TVs: the threads that pace video and frames keep webOS's priority.
 
 **New in 0.0.62:** Cloudflare checks ("Just a moment...") pass with TV Tools on: TV Tools stays out of Cloudflare's challenge frames, changes nothing on sites where it is turned off, and leaves the browser's own user agent alone in Desktop mode. Its working copy is refreshed whenever the extension changes.
 
@@ -92,7 +94,7 @@ then open **Chromium Beta** in the app list and install it.
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.63" in the notes. Please include:
+and write "Beta 0.0.64" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
