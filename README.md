@@ -14,7 +14,7 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 | | |
 |---|---|
 | App | Chromium Beta (`org.nativechromium.browser.beta`) |
-| What to test | Runs on **webOS 4.4 (2018-2019) and newer**: one build for all older TVs. The normal Chromium needs webOS 9. |
+| What to test | Runs on **webOS 4.4 (2018-2019) and newer**: one build for all older TVs. |
 | Built against | glibc 2.24 and the libwayland API that every webOS since 5 has; ships its own NSS and NSPR |
 | Size | 107 MB download, about 183 MB installed |
 
@@ -22,7 +22,9 @@ This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
 
-**New in 0.0.65 (release candidate for the next Stable):** pointer clicks with the Magic Remote or the LG ThinQ app land where the pointer is (they landed at half its position). Cloudflare checks pass: Cloudflare's checkbox runs in its own renderer process, and a site that shows a Cloudflare check switches to the Desktop website version (TV Tools 2.3.3).
+0.0.65 is also the Stable release now: [WebOS Chromium 0.0.65](https://github.com/sarahahzub/WebOS-Chromium/releases/tag/v0.0.65). New Beta builds start at 0.0.66.
+
+**New in 0.0.65:** pointer clicks with the Magic Remote or the LG ThinQ app land where the pointer is (they landed at half its position). Cloudflare checks pass: Cloudflare's checkbox runs in its own renderer process, and a site that shows a Cloudflare check switches to the Desktop website version (TV Tools 2.3.3).
 
 **New in 0.0.64:** Cloudflare "Just a moment..." pages, second try: that page comes on the site's own address, so TV Tools now changes nothing on 403/503 pages.
 
