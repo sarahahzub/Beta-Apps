@@ -7,7 +7,7 @@ testing them never changes or breaks the normal install. Remove a beta app any t
 Homebrew Channel.
 The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below).
 
-## Chromium Beta 0.0.65
+## Chromium Beta 0.0.66
 
 <img src="assets/chromium-beta.png" width="80" alt="Chromium Beta icon">
 
@@ -16,13 +16,15 @@ The exception is the webOS ATL 32-bit beta: it **replaces** webOS ATL (see below
 | App | Chromium Beta (`org.nativechromium.browser.beta`) |
 | What to test | Runs on **webOS 4.4 (2018-2019) and newer**: one build for all older TVs. |
 | Built against | glibc 2.24 and the libwayland API that every webOS since 5 has; ships its own NSS and NSPR |
-| Size | 107 MB download, about 183 MB installed |
+| Size | 108 MB download, about 184 MB installed |
 
 This build passed webosbrew's compatibility check for webOS 5.3, 6.4, 7.4, 8.3, 9.2, 10.2 and 11.2. It hasn't
 been tried on a real webOS 5-8 TV yet; that's what we need testers for. Hardware video, the GPU and memory may
 behave differently on older models.
 
-0.0.65 is also the Stable release now: [WebOS Chromium 0.0.65](https://github.com/sarahahzub/WebOS-Chromium/releases/tag/v0.0.65). New Beta builds start at 0.0.66.
+0.0.66 is also the Stable release: [WebOS Chromium 0.0.66](https://github.com/sarahahzub/WebOS-Chromium/releases/tag/v0.0.66).
+
+**New in 0.0.66:** icons in Settings and other pages show properly (they were yellow squares: the file with the sharper icons was left out of the package). The package is laid out the way LG's own packaging tool writes it, so webosbrew's checks for the Homebrew Channel repository can read it. After an update from 0.0.48 or older, the moved profile folder is private to the app right away.
 
 **New in 0.0.65:** pointer clicks with the Magic Remote or the LG ThinQ app land where the pointer is (they landed at half its position). Cloudflare checks pass: Cloudflare's checkbox runs in its own renderer process, and a site that shows a Cloudflare check switches to the Desktop website version (TV Tools 2.3.3).
 
@@ -98,7 +100,7 @@ then open **Chromium Beta** in the app list and install it.
 ### Report
 
 Open a **TV compatibility report** on [WebOS Chromium](https://github.com/sarahahzub/WebOS-Chromium/issues/new/choose)
-and write "Beta 0.0.65" in the notes. Please include:
+and write "Beta 0.0.66" in the notes. Please include:
 - TV model and webOS version (Settings → Support → TV Information);
 - whether it starts and shows the New Tab page;
 - whether a YouTube video plays smoothly;
