@@ -1,0 +1,15 @@
+{
+  "id": "com.brave.browser",
+  "version": "1.99.58",
+  "type": "native",
+  "title": "Brave Beta",
+  "appDescription": "Unofficial test build of the Brave browser for webOS TVs, Shields ad blocking built in",
+  "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/brave-beta.png",
+  "sourceUrl": "https://github.com/brave/brave-core/tree/v1.99.58",
+  "rootRequired": false,
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/brave-beta-v1.99.58-48/com.brave.browser_1.99.58-48_arm.ipk",
+  "ipkHash": {
+    "sha256": "8b3f6251a58d41b4e298894545c5a3ce99d20213a2de8d28d999f1b6328307ce"
+  },
+  "ipkSize": 125758318
+}
