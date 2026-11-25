@@ -1,0 +1,15 @@
+{
+  "id": "io.github.sarahahzub.webosatl.nr",
+  "version": "0.2.0",
+  "type": "native",
+  "title": "webOS ATL",
+  "appDescription": "webOS ATL for testers, non-rooted install: Android apps on the 32-bit runtime (slim build, no root needed)",
+  "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
+  "sourceUrl": "https://github.com/sarahahzub/WebOS-ATL",
+  "rootRequired": false,
+  "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.6/io.github.sarahahzub.webosatl.nr_0.2.0_arm-slim.ipk",
+  "ipkHash": {
+    "sha256": "9a50b36b979a7fb89a0f2c75c49977233abf4d52c6fcd6d1e37b0bbd78b2dbe3"
+  },
+  "ipkSize": 168346392
+}

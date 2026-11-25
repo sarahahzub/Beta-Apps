@@ -1,9 +1,9 @@
 {
   "paging": {
     "page": 1,
-    "count": 4,
+    "count": 5,
     "maxPage": 1,
-    "itemsTotal": 4
+    "itemsTotal": 5
   },
   "packages": [
     {
@@ -92,6 +92,27 @@
       },
       "shortDescription": "Checks what your TV supports and writes a report for testers (any webOS version)",
       "fullDescriptionUrl": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/webosbrew/tvprobe.html"
+    },
+    {
+      "id": "io.github.sarahahzub.webosatl.nr",
+      "title": "webOS ATL",
+      "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
+      "manifest": {
+        "id": "io.github.sarahahzub.webosatl.nr",
+        "version": "0.2.0",
+        "type": "native",
+        "title": "webOS ATL",
+        "appDescription": "webOS ATL for testers, non-rooted install: Android apps on the 32-bit runtime (slim build, no root needed)",
+        "iconUri": "https://raw.githubusercontent.com/sarahahzub/Beta-Apps/main/assets/webosatl32-beta.png",
+        "sourceUrl": "https://github.com/sarahahzub/WebOS-ATL",
+        "rootRequired": false,
+        "ipkUrl": "https://github.com/sarahahzub/Beta-Apps/releases/download/webosatl32-beta-v0.2.6/io.github.sarahahzub.webosatl.nr_0.2.0_arm-slim.ipk",
+        "ipkHash": {
+          "sha256": "9a50b36b979a7fb89a0f2c75c49977233abf4d52c6fcd6d1e37b0bbd78b2dbe3"
+        },
+        "ipkSize": 168346392
+      },
+      "shortDescription": "Beta for testers: webOS ATL, non-rooted slim build (webOS 4.4 and newer)"
     }
   ]
 }
